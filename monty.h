@@ -52,10 +52,12 @@ typedef struct bus_s
 } bus_t;
 extern bus_t bus;
 
-void push(stack_t **head, unsigned int count);
+int main(int argc, char *argv[]);
+void _push(stack_t **head, unsigned int count);
 void addnode(stack_t **head, int a);
 void free_stack(stack_t *head);
 void queue(stack_t **head, unsigned int counter);
 void addqueue(stack_t **head, int a);
+void _div(stack_t **head, unsigned int count);
 
 #endif
