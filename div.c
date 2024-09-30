@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _div - divides elements of stack.
+ * f_div - divides elements of stack.
  * @head: stack head
  * @count: line number
  * Return: Null
  */
-void _div(stack_t **head, unsigned int count)
+void f_div(stack_t **head, unsigned int count)
 {
 	stack_t *a;
 	int len = 0, aux;
@@ -35,7 +35,7 @@ void _div(stack_t **head, unsigned int count)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	aux = a->next / a->n;
+	aux = a->next->n / a->n;
 	a->next->n = aux;
 	*head = a->next;
 	free(a);

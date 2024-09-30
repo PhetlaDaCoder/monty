@@ -53,11 +53,27 @@ typedef struct bus_s
 extern bus_t bus;
 
 int main(int argc, char *argv[]);
-void _push(stack_t **head, unsigned int count);
+void f_push(stack_t **head, unsigned int count);
 void addnode(stack_t **head, int a);
 void free_stack(stack_t *head);
 void queue(stack_t **head, unsigned int counter);
-void addqueue(stack_t **head, int a);
-void _div(stack_t **head, unsigned int count);
-
+void addqueue(stack_t **head, int n);
+void f_div(stack_t **head, unsigned int count);
+ssize_t _getline(char **linepoint, size_t *p, FILE *stream);
+void f_add(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void f_mod(stack_t **head, unsigned int counter);
+void f_mul(stack_t **head, unsigned int counter);
+void f_nop(stack_t **head, unsigned int counter);
+void f_pall(stack_t **head, unsigned int counter);
+void f_pchar(stack_t **head, unsigned int counter);
+void f_pint(stack_t **head, unsigned int counter);
+void f_pop(stack_t **head, unsigned int counter);
+void f_pstr(stack_t **head, unsigned int counter);
+void f_queue(stack_t **head, unsigned int counter);
+void f_rotl(stack_t **head, __attribute__((unused)) unsigned int counter);
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void f_stack(stack_t **head, unsigned int counter);
+void f_sub(stack_t **head, unsigned int counter);
+void f_swap(stack_t **head, unsigned int counter);
 #endif
